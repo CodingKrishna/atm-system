@@ -1,0 +1,31 @@
+#spring.r2dbc.url = r2dbc:pool:mysql://localhost:3306/users_db?autoReconnect=true&useSSL=false
+#spring.r2dbc.username = root
+#spring.r2dbc.password = root@123
+#spring.r2dbc.pool.enabled=false
+## Hibernate Properties
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+
+# Hibernate ddl auto (create, create-drop, validate, update)
+#spring.jpa.hibernate.ddl-auto = create
+
+#cassandra.contactpoint.one = ${CAS_CONTACT_POINT_ONE:127.0.0.1}
+#spring.data.cassandra.contact-points = ${cassandra.contactpoint.one}
+#spring.data.cassandra.port = ${CAS_CONTACT_POINTS_PORT:9042}
+#spring.data.cassandra.keyspace-name = ${CASSANDRA_KEYSPACE:user_test}
+
+graph:
+  vertices: 4
+  edges:
+    -
+      src: 0
+      dest: 1
+      weight: 0
+    - 
+      src: 1
+      dest: 2
+      weight: 0
+    - 
+      src: 2
+      dest: 0
+      weight: 0
